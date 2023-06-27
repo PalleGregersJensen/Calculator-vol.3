@@ -15,6 +15,7 @@ let buttonValueNine = document.querySelector("#nine");
 let buttonValueZero = document.querySelector("#zero");
 let commaButton = document.querySelector("#comma");
 let allClearValue = document.querySelector("#all-clear");
+let deleteButton = document.querySelector("#delete");
 
 let commaValue = false;
 
@@ -34,6 +35,7 @@ function start() {
   buttonValueZero.addEventListener("click", displayNumber);
   commaButton.addEventListener("click", displayNumber);
   allClearValue.addEventListener("click", displayAllClearInFirstInput);
+  deleteButton.addEventListener("click", displayNumberWithDeletedelements);
 }
 
 function displayNumber() {
@@ -180,7 +182,16 @@ function displayCommaInFirstInput() {
 function displayAllClearInFirstInput() {
   document.querySelector("#first-input").innerHTML = " ";
   console.log("all clear");
-    firstInput = [" "];
-    commaValue = false; 
+  firstInput = [" "];
+  commaValue = false;
   console.log(firstInput);
+}
+
+function displayNumberWithDeletedelements() {
+    document.querySelector("#first-input").innerHTML = "";
+    firstInput.pop();
+    console.log(firstInput);
+    const deleteElements = /*html*/
+        `${firstInput}`;
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", deleteElements);
 }
