@@ -185,18 +185,18 @@ function displayAllClearInFirstInput() {
 
 function deleteClicked() {
   if (firstInput.includes(".")) {
-    commaValue = true;
-    console.log(commaValue);
     firstInput.pop();
+    commaValue = firstInput.includes(".")
+    console.log(commaValue);
     let newFirstInput = firstInput.join("");
     console.log(firstInput);
     console.log(newFirstInput);
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
   } else {
+    firstInput.pop();
     commaValue = false;
     console.log(commaValue);
-    firstInput.pop();
     let newFirstInput = firstInput.join("");
     console.log(firstInput);
     console.log(newFirstInput);
