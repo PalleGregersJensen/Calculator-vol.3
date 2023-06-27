@@ -1,5 +1,6 @@
 "use strict";
 
+//======== Global variables=======//
 let firstInput = [];
 let secondInput = document.querySelector("#second-input").value;
 let result = document.querySelector("#result");
@@ -21,6 +22,7 @@ let commaValue = false;
 
 window.addEventListener("load", start);
 
+//======== Add eventlisteners at start function =======//
 function start() {
   console.log("JS kører");
   buttonValueOne.addEventListener("click", displayNumber);
@@ -35,60 +37,31 @@ function start() {
   buttonValueZero.addEventListener("click", displayNumber);
   commaButton.addEventListener("click", displayNumber);
   allClearValue.addEventListener("click", displayAllClearInFirstInput);
-  deleteButton.addEventListener("click", displayNumberWithDeletedelements);
+  deleteButton.addEventListener("click", deleteClicked);
 }
 
+//======== Display numbers at the display =======//
 function displayNumber() {
   console.log("button clicked");
   if (this === buttonValueOne) {
-    //   firstInput += 1;
-    //   document.querySelector("#first-input").textContent = `${firstInput}1`;
-    //   console.log(firstInput);
     diplayOneInFirstInput();
   } else if (this === buttonValueTwo) {
-    //   firstInput += 2;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayTwoInFirstInput();
   } else if (this === buttonValueThree) {
-    //   firstInput += 3;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayThreeInFirstInput();
   } else if (this === buttonValueFour) {
-    //   firstInput += 4;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayFourInFirstInput();
   } else if (this === buttonValueFive) {
-    //   firstInput += 5;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayFiveInFirstInput();
   } else if (this === buttonValueSix) {
-    //   firstInput += 6;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplaySixInFirstInput();
   } else if (this === buttonValueSeven) {
-    //   firstInput += 7;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplaySevenInFirstInput();
   } else if (this === buttonValueEight) {
-    //   firstInput += 8;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayEightInFirstInput();
   } else if (this === buttonValueNine) {
-    //   firstInput += 9;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayNineInFirstInput();
   } else if (this === buttonValueZero) {
-    //   firstInput += 0;
-    // document.querySelector("#first-input").textContent = firstInput;
-    // console.log(firstInput);
     diplayZeroInFirstInput();
   } else if (this === commaButton) {
     displayCommaInFirstInput();
@@ -98,84 +71,107 @@ function displayNumber() {
 }
 
 function diplayOneInFirstInput() {
-  const oneHtml = /*html*/ `1`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", oneHtml);
-  firstInput.push(oneHtml);
+  const one = 1;
+  firstInput.push(one);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayTwoInFirstInput() {
-  const twoHtml = /*html*/ `2`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", twoHtml);
-  firstInput.push(twoHtml);
+  const two = 2;
+  firstInput.push(two);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayThreeInFirstInput() {
-  const threeHtml = /*html*/ `3`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", threeHtml);
-  firstInput.push(threeHtml);
+  const three = 3;
+  firstInput.push(three);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayFourInFirstInput() {
-  const fourHtml = /*html*/ `4`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", fourHtml);
-  firstInput.push(fourHtml);
+  const four = 4;
+  firstInput.push(four);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayFiveInFirstInput() {
-  const fiveHtml = /*html*/ `5`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", fiveHtml);
-  firstInput.push(fiveHtml);
+  const five = 5;
+  firstInput.push(five);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplaySixInFirstInput() {
-  const sixHtml = /*html*/ `6`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", sixHtml);
-  firstInput.push(sixHtml);
+  const six = 6;
+  firstInput.push(six);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplaySevenInFirstInput() {
-  const sevenHtml = /*html*/ `7`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", sevenHtml);
-  firstInput.push(sevenHtml);
+  const seven = 7;
+  firstInput.push(seven);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayEightInFirstInput() {
-  const eightHtml = /*html*/ `8`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", eightHtml);
-  firstInput.push(eightHtml);
+  const eight = 8;
+  firstInput.push(eight);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayNineInFirstInput() {
-  const nineHtml = /*html*/ `9`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", nineHtml);
-  firstInput.push(nineHtml);
+  const nine = 9;
+  firstInput.push(nine);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function diplayZeroInFirstInput() {
-  const zeroHtml = /*html*/ `0`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", zeroHtml);
-  firstInput.push(zeroHtml);
+  const zero = 0;
+  firstInput.push(zero);
   console.log(firstInput);
+  let newFirstInput = firstInput.join("");
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
 function displayCommaInFirstInput() {
   if (commaValue === false) {
-    const commaHtml = /*html*/ `.`;
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", commaHtml);
-    firstInput.push(commaHtml);
+    const comma = ".";
+    firstInput.push(comma);
+    let newFirstInput = firstInput.join("");
+    document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
     console.log(firstInput);
     commaValue = true;
   } else if (commaValue) {
     console.log("Kun et komma i tal");
+    console.log(commaValue);
   }
 }
 
@@ -187,18 +183,24 @@ function displayAllClearInFirstInput() {
   console.log(firstInput);
 }
 
-function displayNumberWithDeletedelements() {
+function deleteClicked() {
   if (firstInput.includes(".")) {
-    commaValue = false;
-    console.log(commaValue);
-  } else {
     commaValue = true;
     console.log(commaValue);
+    firstInput.pop();
+    let newFirstInput = firstInput.join("");
+    console.log(firstInput);
+    console.log(newFirstInput);
+    document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
+  } else {
+    commaValue = false;
+    console.log(commaValue);
+    firstInput.pop();
+    let newFirstInput = firstInput.join("");
+    console.log(firstInput);
+    console.log(newFirstInput);
+    document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
   }
-  let newFirstInput = firstInput.join("");
-  console.log(newFirstInput);
-  document.querySelector("#first-input").innerHTML = "";
-  firstInput.pop();
-  const deleteElements = /*html*/ `${newFirstInput}`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", deleteElements);
 }
