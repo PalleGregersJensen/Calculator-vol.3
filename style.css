@@ -1,0 +1,14 @@
+body{
+    background-color: red;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 50vw;
+    height: 30vh;
+}
+
+.span-two {
+    grid-column: span 2;
+}
