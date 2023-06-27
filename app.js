@@ -182,7 +182,7 @@ function displayCommaInFirstInput() {
 function displayAllClearInFirstInput() {
   document.querySelector("#first-input").innerHTML = " ";
   console.log("all clear");
-  firstInput = [" "];
+  firstInput = [];
   commaValue = false;
   console.log(firstInput);
 }
@@ -190,8 +190,10 @@ function displayAllClearInFirstInput() {
 function displayNumberWithDeletedelements() {
     document.querySelector("#first-input").innerHTML = "";
     firstInput.pop();
-    console.log(firstInput);
+    let newFirstInput = firstInput.join("");
+    console.log(newFirstInput);
     const deleteElements = /*html*/
-        `${firstInput}`;
+        `${newFirstInput}`;
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", deleteElements);
+    
 }
