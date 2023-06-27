@@ -14,6 +14,7 @@ let buttonValueEight = document.querySelector("#eight");
 let buttonValueNine = document.querySelector("#nine");
 let buttonValueZero = document.querySelector("#zero");
 let commaValue = document.querySelector("#comma");
+let allClearValue = document.querySelector("#all-clear");
 
 window.addEventListener("load", start);
 
@@ -28,8 +29,9 @@ function start() {
   buttonValueSeven.addEventListener("click", displayNumber);
   buttonValueEight.addEventListener("click", displayNumber);
   buttonValueNine.addEventListener("click", displayNumber);
-    buttonValueZero.addEventListener("click", displayNumber);
-    commaValue.addEventListener("click", displayNumber);
+  buttonValueZero.addEventListener("click", displayNumber);
+  commaValue.addEventListener("click", displayNumber);
+  allClearValue.addEventListener("click", displayAllClearInFirstInput);
 }
 
 function displayNumber() {
@@ -43,51 +45,52 @@ function displayNumber() {
     //   firstInput += 2;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayTwoInFirstInput();
+    diplayTwoInFirstInput();
   } else if (this === buttonValueThree) {
     //   firstInput += 3;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayThreeInFirstInput();
+    diplayThreeInFirstInput();
   } else if (this === buttonValueFour) {
     //   firstInput += 4;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayFourInFirstInput();
+    diplayFourInFirstInput();
   } else if (this === buttonValueFive) {
     //   firstInput += 5;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayFiveInFirstInput();
+    diplayFiveInFirstInput();
   } else if (this === buttonValueSix) {
     //   firstInput += 6;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplaySixInFirstInput();
+    diplaySixInFirstInput();
   } else if (this === buttonValueSeven) {
     //   firstInput += 7;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplaySevenInFirstInput();
+    diplaySevenInFirstInput();
   } else if (this === buttonValueEight) {
     //   firstInput += 8;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayEightInFirstInput();
+    diplayEightInFirstInput();
   } else if (this === buttonValueNine) {
     //   firstInput += 9;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayNineInFirstInput();
+    diplayNineInFirstInput();
   } else if (this === buttonValueZero) {
     //   firstInput += 0;
     // document.querySelector("#first-input").textContent = firstInput;
     // console.log(firstInput);
-      diplayZeroInFirstInput();
+    diplayZeroInFirstInput();
   } else if (this === commaValue) {
-      displayCommaInFirstInput(); 
-    }
-    
+    displayCommaInFirstInput();
+  } else if (this === allClearValue) {
+    displayAllClearInFirstInput();
+  }
 }
 
 function diplayOneInFirstInput() {
@@ -143,4 +146,9 @@ function diplayZeroInFirstInput() {
 function displayCommaInFirstInput() {
   const commaHtml = /*html*/ `.`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", commaHtml);
+}
+
+function displayAllClearInFirstInput() {
+  document.querySelector("#first-input").innerHTML = " ";
+  console.log("all clear");
 }
