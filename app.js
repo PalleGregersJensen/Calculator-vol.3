@@ -38,6 +38,10 @@ function start() {
   commaButton.addEventListener("click", displayNumber);
   allClearValue.addEventListener("click", displayAllClearInFirstInput);
   deleteButton.addEventListener("click", deleteClicked);
+  document.querySelector("#multiply").addEventListener("click", multiplyClicked);
+  document.querySelector("#divide").addEventListener("click", divideClicked);
+  document.querySelector("#plus").addEventListener("click", plusClicked);
+  document.querySelector("#minus").addEventListener("click", minusClicked);
 }
 
 //======== Display numbers at the display =======//
@@ -203,4 +207,31 @@ function deleteClicked() {
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
   }
+}
+
+
+function multiplyClicked() {
+  console.log("multiply clciked")
+}
+
+function divideClicked() {
+  console.log("divide clciked");
+}
+
+function plusClicked() {
+  console.log("plus clciked");
+  let newFirstInput = firstInput.join("");
+  firstInput = [];
+  document.querySelector("#first-input").innerHTML = "";
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
+  console.log(firstInput);
+  console.log(newFirstInput);
+  let result = firstInput.join("") + newFirstInput;
+  console.log(result);
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+
+}
+
+function minusClicked() {
+  console.log("minus clciked");
 }
