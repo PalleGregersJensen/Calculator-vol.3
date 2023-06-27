@@ -1,6 +1,6 @@
 "use strict";
 
-let firstInput = document.querySelector("#first-input");
+let firstInput = [];
 let secondInput = document.querySelector("#second-input").value;
 let result = document.querySelector("#result");
 let buttonValueOne = document.querySelector("#one");
@@ -96,59 +96,83 @@ function displayNumber() {
 function diplayOneInFirstInput() {
   const oneHtml = /*html*/ `1`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", oneHtml);
+  firstInput.push(oneHtml);
+  console.log(firstInput);
 }
 
 function diplayTwoInFirstInput() {
   const twoHtml = /*html*/ `2`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", twoHtml);
+  firstInput.push(twoHtml);
+  console.log(firstInput);
 }
 
 function diplayThreeInFirstInput() {
   const threeHtml = /*html*/ `3`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", threeHtml);
+  firstInput.push(threeHtml);
+  console.log(firstInput);
 }
 
 function diplayFourInFirstInput() {
   const fourHtml = /*html*/ `4`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", fourHtml);
+  firstInput.push(fourHtml);
+  console.log(firstInput);
 }
 
 function diplayFiveInFirstInput() {
   const fiveHtml = /*html*/ `5`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", fiveHtml);
+  firstInput.push(fiveHtml);
+  console.log(firstInput);
 }
 
 function diplaySixInFirstInput() {
   const sixHtml = /*html*/ `6`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", sixHtml);
+  firstInput.push(sixHtml);
+  console.log(firstInput);
 }
 
 function diplaySevenInFirstInput() {
   const sevenHtml = /*html*/ `7`;
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", sevenHtml);
+  firstInput.push(sevenHtml);
+  console.log(firstInput);
 }
 
 function diplayEightInFirstInput() {
   const eightHtml = /*html*/ `8`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", eightHtml);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", eightHtml);
+    firstInput.push(eightHtml);
+    console.log(firstInput);
 }
 
 function diplayNineInFirstInput() {
   const nineHtml = /*html*/ `9`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", nineHtml);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", nineHtml);
+    firstInput.push(nineHtml);
+    console.log(firstInput);
 }
 
 function diplayZeroInFirstInput() {
   const zeroHtml = /*html*/ `0`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", zeroHtml);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", zeroHtml);
+    firstInput.push(zeroHtml);
+    console.log(firstInput);
 }
 
 function displayCommaInFirstInput() {
   const commaHtml = /*html*/ `.`;
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", commaHtml);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", commaHtml);
+    firstInput.push(commaHtml);
+    console.log(firstInput);
 }
 
 function displayAllClearInFirstInput() {
   document.querySelector("#first-input").innerHTML = " ";
-  console.log("all clear");
+    console.log("all clear");
+    firstInput = [" "];
+    console.log(firstInput);
 }
