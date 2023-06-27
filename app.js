@@ -188,12 +188,17 @@ function displayAllClearInFirstInput() {
 }
 
 function displayNumberWithDeletedelements() {
-    document.querySelector("#first-input").innerHTML = "";
-    firstInput.pop();
-    let newFirstInput = firstInput.join("");
-    console.log(newFirstInput);
-    const deleteElements = /*html*/
-        `${newFirstInput}`;
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", deleteElements);
-    
+  if (firstInput.includes(".")) {
+    commaValue = false;
+    console.log(commaValue);
+  } else {
+    commaValue = true;
+    console.log(commaValue);
+  }
+  let newFirstInput = firstInput.join("");
+  console.log(newFirstInput);
+  document.querySelector("#first-input").innerHTML = "";
+  firstInput.pop();
+  const deleteElements = /*html*/ `${newFirstInput}`;
+  document.querySelector("#first-input").insertAdjacentHTML("beforeend", deleteElements);
 }
