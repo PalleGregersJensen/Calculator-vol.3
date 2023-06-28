@@ -298,20 +298,28 @@ function equalsClicked() {
   console.log(secondNumber);
   if (newFirstInput.includes("+")) {
     let result = firstNumber + secondNumber;
+    firstInput.push(result);
+    firstInput = firstInput.slice(-1);
     document.querySelector("#first-input").innerHTML = "";
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("-")) {
     let result = firstNumber - secondNumber;
+    firstInput.push(result);
+    firstInput = firstInput.slice(-1);
     document.querySelector("#first-input").innerHTML = "";
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("/")) {
     let result = firstNumber / secondNumber;
+    firstInput.push(result);
+    firstInput = firstInput.slice(-1);
     document.querySelector("#first-input").innerHTML = "";
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("*")) {
     let result = firstNumber * secondNumber;
+    firstInput.push(result);
+    firstInput = firstInput.slice(-1);
     document.querySelector("#first-input").innerHTML = "";
-    document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+    document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   }
 }
 
