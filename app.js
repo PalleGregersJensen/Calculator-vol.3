@@ -2,8 +2,8 @@
 
 //======== Global variables=======//
 let firstInput = [];
-let secondInput = document.querySelector("#second-input").value;
-let result = document.querySelector("#result");
+// let secondInput = document.querySelector("#second-input").value;
+// let result = document.querySelector("#result");
 let buttonValueOne = document.querySelector("#one");
 let buttonValueTwo = document.querySelector("#two");
 let buttonValueThree = document.querySelector("#three");
@@ -259,6 +259,8 @@ function diplayDivideInFirstInput() {
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
+
+      // =======Unneccessary code ======//
 // function multiplyClicked() {
 //   console.log("multiply clciked");
 // }
