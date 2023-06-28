@@ -7,8 +7,18 @@ body{
     grid-template-columns: auto auto auto auto;
     width: 50vw;
     height: 30vh;
+    gap: 2%;
 }
 
 .span-two {
     grid-column: span 2;
+}
+
+#first-input {
+    background-color: white;
+    width:50vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
 }

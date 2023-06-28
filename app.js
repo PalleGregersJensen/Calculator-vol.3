@@ -302,19 +302,20 @@ function equalsClicked() {
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
   } else if (newFirstInput.includes("-")) {
     let result = firstNumber - secondNumber;
-     document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
   } else if (newFirstInput.includes("/")) {
     let result = firstNumber / secondNumber;
-     document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
   } else if (newFirstInput.includes("*")) {
     let result = firstNumber * secondNumber;
-     document.querySelector("#first-input").innerHTML = "";
+    document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
   }
 }
 
+// ========== Calculate result and return value to function equalsClicked =======//
 function firstInputSplitted() {
   if (newFirstInput.includes("+")) {
     let splittedInput = newFirstInput.split("+");
