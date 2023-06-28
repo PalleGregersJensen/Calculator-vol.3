@@ -259,31 +259,31 @@ function diplayDivideInFirstInput() {
   document.querySelector("#first-input").insertAdjacentHTML("beforeend", newFirstInput);
 }
 
-function multiplyClicked() {
-  console.log("multiply clciked");
-}
+// function multiplyClicked() {
+//   console.log("multiply clciked");
+// }
 
-function divideClicked() {
-  console.log("divide clciked");
-}
+// function divideClicked() {
+//   console.log("divide clciked");
+// }
 
-function plusClicked() {
-  console.log("plus clciked");
-  newFirstInput = firstInput.join("");
-  allClearClicked();
-  document.querySelector("#first-input").innerHTML = "";
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
-  console.log(firstInput);
-  console.log(newFirstInput);
-  let result = Number(firstInput.join("")) + Number(newFirstInput);
-  console.log(result);
-  // document.querySelector("#first-input").innerHTML = "";
-  document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
-}
+// function plusClicked() {
+//   console.log("plus clciked");
+//   newFirstInput = firstInput.join("");
+//   allClearClicked();
+//   document.querySelector("#first-input").innerHTML = "";
+//   document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
+//   console.log(firstInput);
+//   console.log(newFirstInput);
+//   let result = Number(firstInput.join("")) + Number(newFirstInput);
+//   console.log(result);
+//   // document.querySelector("#first-input").innerHTML = "";
+//   document.querySelector("#first-input").insertAdjacentHTML("beforeend", result);
+// }
 
-function minusClicked() {
-  console.log("minus clciked");
-}
+// function minusClicked() {
+//   console.log("minus clciked");
+// }
 
 // ===== Calculate results ======//
 function equalsClicked() {
@@ -300,24 +300,28 @@ function equalsClicked() {
     let result = firstNumber + secondNumber;
     firstInput.push(result);
     firstInput = firstInput.slice(-1);
+    console.log(firstInput);
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("-")) {
     let result = firstNumber - secondNumber;
     firstInput.push(result);
     firstInput = firstInput.slice(-1);
+    console.log(firstInput);
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("/")) {
     let result = firstNumber / secondNumber;
     firstInput.push(result);
     firstInput = firstInput.slice(-1);
+    console.log(firstInput);
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   } else if (newFirstInput.includes("*")) {
     let result = firstNumber * secondNumber;
     firstInput.push(result);
     firstInput = firstInput.slice(-1);
+    console.log(firstInput);
     document.querySelector("#first-input").innerHTML = "";
     document.querySelector("#first-input").insertAdjacentHTML("beforeend", firstInput);
   }
